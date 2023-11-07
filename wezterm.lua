@@ -16,7 +16,8 @@ config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
 
 config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
-config.font_size = 10
+config.font = wezterm.font('BigBlueTerm437 Nerd Font')
+config.font_size = 9
 
 config.use_fancy_tab_bar = false
 
