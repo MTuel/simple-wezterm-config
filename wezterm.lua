@@ -18,7 +18,7 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 end
 
 if(wezterm.target_triple == 'x86_64-apple-darwin') then
-  config.default_prog = { '/usr/bin/zsh' }
+  config.default_prog = { '/usr/local/microsoft/powershell/7/pwsh' }
 end
 
 config.font = wezterm.font_with_fallback { 'CaskaydiaCove Nerd Font Mono' }
