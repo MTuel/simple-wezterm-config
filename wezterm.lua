@@ -32,8 +32,8 @@ config.leader = { key = 'z', mods = 'CTRL', timeout_milliseconds = 2000 }
 config.keys = {
 
   -- Creating & Closing Panes
-  { key = 's', mods = 'LEADER', action = wezterm.action.SplitHorizontal },
-  { key = 'v', mods = 'LEADER', action = wezterm.action.SplitVertical },
+  { key = 's', mods = 'LEADER', action = wezterm.action.SplitVertical },
+  { key = 'v', mods = 'LEADER', action = wezterm.action.SplitHorizontal },
   { key = 'w', mods = 'LEADER', action = wezterm.action.CloseCurrentPane { confirm = true } },
 
   -- Navigating Panes
