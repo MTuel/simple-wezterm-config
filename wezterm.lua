@@ -21,6 +21,10 @@ if(wezterm.target_triple == 'x86_64-apple-darwin') then
   config.default_prog = { '/usr/local/microsoft/powershell/7/pwsh' }
 end
 
+if(wezterm.target_triple == 'x86_64-unknown-linux-gnu') then
+  config.default_prog = { '/opt/microsoft/powershell/7/pwsh' }
+end
+
 config.font = wezterm.font_with_fallback { 'CaskaydiaCove Nerd Font Mono' }
 config.font_size = 10
 
