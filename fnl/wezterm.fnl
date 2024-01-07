@@ -12,7 +12,7 @@
 
 ;; Detect the current OS and set the default shell to PowerShell.
 (set config.default_prog
-  (if (= wezterm.target_triple "x86_64_pc-windows-msvc") 
+  (if (= wezterm.target_triple "x86_64-pc-windows-msvc") 
         ["C:\\\\Program Files\\PowerShell\\7\\pwsh.exe"]
         (= wezterm.target_triple "x86_64-apple-darwin")
         ["/usr/local/microsoft/powershell/7/pwsh"]
