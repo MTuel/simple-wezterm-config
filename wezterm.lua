@@ -1,1 +1,1 @@
-require("fennel").install().dofile("/home/mtuel/.config/wezterm/fnl/wezterm.fnl")
+require("fennel").install().dofile(os.getenv("HOME") .. "/.config/wezterm/fnl/wezterm.fnl")
