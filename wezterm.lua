@@ -12,16 +12,6 @@ end
 
 config.color_scheme = 'OneDark (base16)'
 
-if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-  config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
-end
-if(wezterm.target_triple == 'x86_64-apple-darwin') then
-  config.default_prog = { '/usr/local/microsoft/powershell/7/pwsh' }
-end
-if(wezterm.target_triple == 'x86_64-unknown-linux-gnu') then
-  config.default_prog = { '/opt/microsoft/powershell/7/pwsh' }
-end
-
 config.font = wezterm.font_with_fallback { 'CaskaydiaCove Nerd Font Mono' }
 config.font_size = 10
 config.use_fancy_tab_bar = false
@@ -61,6 +51,19 @@ config.colors = {
     },
   }
 }
+
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
+end
+if(wezterm.target_triple == 'x86_64-apple-darwin') then
+  -- Set the default shell with the 'chsh' command on the system.
+  config.font_size = 12
+end
+if(wezterm.target_triple == 'x86_64-unknown-linux-gnu') then
+  config.default_prog = { '/opt/microsoft/powershell/7/pwsh' }
+end
+
+
 
 -- Set the leader key to a key that doesn't conflict with other keybindings.
 config.leader = { key = 'z', mods = 'CTRL', timeout_milliseconds = 2000 }
