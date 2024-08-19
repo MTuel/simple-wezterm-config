@@ -15,6 +15,7 @@ config.color_scheme = 'OneDark (base16)'
 config.font = wezterm.font_with_fallback { 'CaskaydiaCove Nerd Font Mono' }
 config.font_size = 10
 config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
 
 config.colors = {
   tab_bar = {
@@ -52,6 +53,11 @@ config.colors = {
   }
 }
 
+config.command_palette_bg_color = '#282c34'
+config.command_palette_fg_color = '#dcdcdc'
+config.command_palette_font_size = 12
+
+
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe' }
 end
@@ -62,8 +68,6 @@ end
 if(wezterm.target_triple == 'x86_64-unknown-linux-gnu') then
   config.default_prog = { '/opt/microsoft/powershell/7/pwsh' }
 end
-
-
 
 -- Set the leader key to a key that doesn't conflict with other keybindings.
 config.leader = { key = 'z', mods = 'CTRL', timeout_milliseconds = 2000 }
